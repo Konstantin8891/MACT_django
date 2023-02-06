@@ -24,6 +24,12 @@ docker exec -it infra_back_1 bash
 
 python manage.py shell < fullfill_db_correct.py
 
+Время выполнения около 5 минут
+
+Лог ошибок находится в code/errors.txt
+
+Лог обработанные проектов находится в code/nec-urls.txt
+
 exit
 
 ### Поисковый запрос 
