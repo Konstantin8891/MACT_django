@@ -54,7 +54,12 @@ async def add_records(
                 ).text
                 url_spl = urlsplit(url)
                 service = url_spl.netloc
-                await Museum.objects.acreate(service=service, link=post['link'], title=title, content=content)
+                await Museum.objects.acreate(
+                    service=service,
+                    link=post['link'],
+                    title=title,
+                    content=content
+                )
     except Exception:
         spl_url = urlsplit(url)
         errors_set.add(spl_url.netloc)
